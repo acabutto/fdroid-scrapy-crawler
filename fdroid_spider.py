@@ -9,7 +9,7 @@ class FdroidSpider(scrapy.Spider):
     start_urls = ['https://f-droid.org/en/packages/index.html']
 
     if (not os.path.exists('apks')):
-    os.makedirs('apks')
+        os.makedirs('apks')
 
     custom_settings = {
         'CONCURRENT_REQUESTS': 16,
