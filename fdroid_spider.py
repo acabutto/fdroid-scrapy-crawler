@@ -44,8 +44,5 @@ class FdroidSpider(scrapy.Spider):
 
         self.logger.info('Saving APK %s as %s', response.url, path)
 
-        # avoid possible rate limit
-        #time.sleep(1)
-
         with open(path, 'wb') as f:
             f.write(response.body)
